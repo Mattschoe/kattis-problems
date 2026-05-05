@@ -37,12 +37,13 @@ Each trip of the elevator incurs the following cost:
 \begin{enumerate}
     \item \textbf{Travel up:} $1$ per floor, from floor $0$ up to the highest destination floor
     among the groups in the trip. Passing intermediate floors along the way adds no extra cost.
-    \item \textbf{Stop cost:} $1$ for each \emph{distinct} destination floor among the groups in
-    the trip (door open/close penalty). For example, a trip carrying 3 groups bound for floors
-    $\{2, 5, 5\}$ has a stop cost of $2$, since there are two distinct destination floors.
+    \item \textbf{Stop cost:} 1 for each distinct destination floor among the groups in the trip.
+    Boarding at floor 0 is free; only disembarking stops are counted. For example, a trip carrying
+    3 groups bound for floors $\{2, 5, 5\}$ has a stop cost of $2$, since there are two distinct
+    destination floors.
     \item \textbf{Travel down:} $1$ per floor, back to floor $0$ to pick up the next group. After
     the \emph{final} trip, the elevator does not need to return to floor $0$, so no descent cost
-    is incurred for the final trip
+    is incurred for the final trip.
 \end{enumerate}
 
 \begin{Input}
@@ -57,3 +58,8 @@ Each trip of the elevator incurs the following cost:
 \begin{Output}
     Output a single integer: the minimum total cost.
 \end{Output}
+
+\subsection*{Explanation of Sample Input 1}
+\textbf{Trip 1:} Group 1 only (1 up + 1 open + 1 down) = 3 \\
+\textbf{Trip 2:} Group 2 \& 3 (5 up + 1 open) = 6 \\
+\textbf{Total:} 9
