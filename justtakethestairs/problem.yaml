@@ -10,5 +10,5 @@ credits: Matthias Nielsen
 license: cc by-sa
 rights_owner: Matthias Nielsen
 
-# limits:
-#   time_limit: 1.0
+limits:
+  time_limit: 1.0
